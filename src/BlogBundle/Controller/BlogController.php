@@ -17,7 +17,10 @@ class BlogController extends Controller
     	$blogRepository = $em->getRepository('BlogBundle:Blog');
     	$blog = $blogRepository->find($id);
     	var_dump($blog);
-        return $this->render('::base.html.twig');
+        return $this->render('BlogBundle:Blog:view.html.twig',
+        	[
+        		'blog' => $blog,
+        	]);
     }
 
 }
