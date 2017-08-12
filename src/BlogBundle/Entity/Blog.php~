@@ -1,0 +1,42 @@
+<?php
+
+namespace BlogBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Class Blog
+ * @package BlogBundle/Entity
+ * @ORM\Table(name="blog")
+ * @ORM\Entity
+ */
+class Blog
+{
+    /**
+     * @ORM\Id()
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $title;
+    /**
+     * @ORM\Column(type="text",nullable=true)
+     */
+    private $body;
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $summary;
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $created;
+
+    public function __constructor()
+    {
+        $this->created = new DataTime();
+    }
+}
