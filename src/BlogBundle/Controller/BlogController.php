@@ -16,11 +16,20 @@ class BlogController extends Controller
     	$em = $this->getDoctrine();
     	$blogRepository = $em->getRepository('BlogBundle:Blog');
     	$blog = $blogRepository->find($id);
-    	var_dump($blog);
         return $this->render('BlogBundle:Blog:view.html.twig',
         	[
         		'blog' => $blog,
         	]);
+    }
+
+    public function teaserAction(){
+        $em = $this->getDoctrine();
+        $blogRepository = $em->getRepository('BlogBundle:Blog');
+        $blogs = $blogRepository->findAll();
+        return $this->render('BlogBundle:Blog:teaser.html.twig',
+            [
+                'blogs' => $blogs,
+            ]);
     }
 
 }
