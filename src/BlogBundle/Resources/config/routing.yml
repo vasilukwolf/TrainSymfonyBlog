@@ -11,3 +11,11 @@ blog_view:
   defaults: {_controller: BlogBundle:Blog:BlogView}
   requirements:
     id: \d+
+
+blog_about:
+  path: /about_us
+  defaults: {_controller: BlogBundle:Page:aboutUs}
+
+
+
+
