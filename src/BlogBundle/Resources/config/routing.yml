@@ -1,3 +1,21 @@
 homepage:
   path: /
-  defaults: {_controller: BlogBundle:Blog:homepage}
+  defaults: {_controller: BlogBundle:Blog:teaser}
+
+blog_teaser:
+  path: /blog/
+  defaults: {_controller: BlogBundle:Blog:teaser}
+
+blog_view:
+  path: /blog/{id}
+  defaults: {_controller: BlogBundle:Blog:BlogView}
+  requirements:
+    id: \d+
+
+blog_about:
+  path: /about_us
+  defaults: {_controller: BlogBundle:Page:aboutUs}
+
+
+
+
