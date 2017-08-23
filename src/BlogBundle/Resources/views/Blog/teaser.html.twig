@@ -1,6 +1,6 @@
-{% extends "::base.html.twig" %}
-{% block body %}
-	<h1>Посты</h1>
+{% extends "BlogBundle::layout.html.twig" %}
+{% block page_titile %}Посты{% endblock %}
+{% block content %}
 	{% for blog in blogs%}
 		<article>
 			<h2>
@@ -23,4 +23,4 @@
 			</article>
 		{% endfor %}
 		
-	{% endblock %}
+{% endblock %}
