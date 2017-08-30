@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% block header %}
+    <header>
+        {% block logo %}
+            <div class="Logo">
+                <img class="logoImage" src="#">
+            </div>
+        {% endblock %}
+
+        {% block menu %}
+
+        {% endblock %}
+    </header>
+    {% endblock %}
+    {% block content %}
+        {% block sidetitle %}
+            <div class="page_title" id="page_title">
+                <h1>{% block title%}{% endblock %}</h1>
+            </div>
+        {% endblock %}
+        {% block main %}{% endblock %}
+    {% endblock %}
+    {% block footer %}
+    <footer>
+        <div class="CopyWrite">CopyWrite <a href="https://wob.su"></div>
+    </footer>
+    {% endblock %}
+
+{% endblock %}
