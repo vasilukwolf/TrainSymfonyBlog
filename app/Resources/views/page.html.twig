@@ -15,12 +15,14 @@
     </header>
     {% endblock %}
     {% block content %}
+        <div id="main_container">
         {% block sidetitle %}
             <div class="page_title" id="page_title">
                 <h1>{% block title%}{% endblock %}</h1>
             </div>
         {% endblock %}
         {% block main %}{% endblock %}
+        </div>
     {% endblock %}
     {% block footer %}
     <footer>
